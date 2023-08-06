@@ -4,13 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.curso</groupId>
 	<artifactId>Ejemplo_Site_Maven</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1-SNAPSHOT</version> 
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
-<!--		<checkstyle.config.location>config/maven_checks.xml</checkstyle.config.location>-->
 	</properties>
 
 	<dependencies>

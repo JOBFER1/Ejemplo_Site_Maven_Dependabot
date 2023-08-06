@@ -1,0 +1,40 @@
+<project name="Sample Project">
+
+	<bannerLeft>
+		<name>Sonatype</name>
+		<src>images/logo.png</src>
+		<href>http://www.sonatype.com</href>
+	</bannerLeft>
+	
+	<bannerRight>
+		<name>Right Banner</name>
+		<src>images/banner-right.png</src>
+		<href>http://www.yahoo.com</href>
+	</bannerRight>
+
+	<version position="left"/>
+	<publishDate position="navigation-top" format="dd-MM-yyyy"/>
+
+	<body>
+		<links>
+			<item name="Apache" href="http://www.apache.org"/>
+			<item name="Maven" href="http://maven.apache.org"/>
+		</links>
+
+		<menu name="Menu 1">
+			<item name="Overview" href="index.html"/>
+			<item name="News" href="news.html"/>
+			<item name="Features" href="features.html"/>
+		</menu>
+		
+		<menu ref="reports"/>
+		
+		<menu name="Menu 2">
+			<item name="Submenu 1" href="/developer/index.html" collapse="true">
+				<item name="Architectura" href="/developer/architecture.html"/>
+				<item name="Guia de Integracion" href="/developer/embedding.html"/>
+			</item>
+		</menu>
+	</body>
+	
+</project>
