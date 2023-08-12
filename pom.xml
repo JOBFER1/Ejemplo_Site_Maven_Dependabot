@@ -1,8 +1,110 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.curso</groupId>
-  <artifactId>Ejemplo_Site_Maven</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.curso</groupId>
+	<artifactId>Ejemplo_Site_Maven</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<description>Un ejemplo</description>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<licenses>
+		<license>
+			<name>Apache 2</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+			<comments>A business-friendly OSS license</comments>
+		</license>
+	</licenses>
+
+	<organization>
+		<name>Codehaus Mojo</name>
+		<url>http://mojo.codehaus.org</url>
+	</organization>
+
+	<scm>
+		<url>https://git.eclipse.org/r/plugins/gitiles/jgit/jgit</url>
+		<connection>scm:git:https://git.eclipse.org/r/jgit/jgit</connection>
+	</scm>
+
+	<ciManagement>
+		<system>Jenkins</system>
+		<url>https://ci.eclipse.org/jgit</url>
+	</ciManagement>
+
+	<mailingLists>
+		<mailingList>
+			<name>jgit-dev Mailing List</name>
+			<post>jgit-dev@eclipse.org</post>
+			<subscribe>https://dev.eclipse.org/mailman/listinfo/jgit-dev</subscribe>
+			<unsubscribe>https://dev.eclipse.org/mailman/listinfo/jgit-dev</unsubscribe>
+			<archive>http://dev.eclipse.org/mhonarc/lists/jgit-dev</archive>
+		</mailingList>
+	</mailingLists>
+
+	<issueManagement>
+		<url>
+			https://bugs.eclipse.org/bugs/buglist.cgi?query_format=advanced;component=JGit;product=JGit;classification=Technology</url>
+		<system>Bugzilla</system>
+	</issueManagement>
+
+	<repositories>
+		<repository>
+			<id>jgit-repository</id>
+			<url>https://repo.eclipse.org/content/repositories/jgit-releases/</url>
+		</repository>
+	</repositories>
+
+	<distributionManagement>
+		<site>
+			<id>github-project-site</id>
+			<url>gitsite:git@github.com/jenkinsci/your-plugin</url>
+		</site>
+	</distributionManagement>	
+  
+    <developers>
+        <developer>
+            <id>eric</id>
+            <name>Eric</name>
+            <email>eredmond@codehaus.org</email>
+            <url>http://eric.propellors.net</url>
+            <organization>Codehaus</organization>
+            <organizationUrl>http://mojo.codehaus.org</organizationUrl>
+            <roles>
+                <role>architect</role>
+                <role>developer</role>
+            </roles>
+            <timezone>-6</timezone>
+            <properties>
+                <picUrl>http://tinyurl.com/prv4t</picUrl>
+            </properties>
+        </developer>
+    </developers>
+
+    <contributors>
+        <contributor>
+            <name>Noelle</name>
+            <email>some.name@gmail.com</email>
+            <url>http://noellemarie.com</url>
+            <organization>Noelle Marie</organization>
+            <organizationUrl>http://noellemarie.com</organizationUrl>
+            <roles>
+                <role>tester</role>
+            </roles>
+            <timezone>-5</timezone>
+            <properties>
+                <gtalk>some.name@gmail.com</gtalk>
+            </properties>
+        </contributor>
+    </contributors>
+
   
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -10,47 +112,61 @@
     	<maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
-  <build>
-    <plugins>
-  	  <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-site-plugin</artifactId>
-        <version>4.0.0-M8</version>  
-<!--        <version>3.7.1</version>-->
-      </plugin>
-    </plugins>
-  </build>
-  
-  <reporting>
-    <plugins>
-	  <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-project-info-reports-plugin</artifactId>
-        <version>3.4.5</version>
-        <reportSets>
-            <reportSet>
-                <reports>
-                    <report>index</report>
-                    <report>plugin-management</report>
-                    <report>summary</report> 
-                </reports>
-            </reportSet>
-        </reportSets> 
-      </plugin>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>4.0.0-M8</version>
+				<!--        <version>3.7.1</version>-->
+			</plugin>
+		</plugins>
+	</build>
 
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-javadoc-plugin</artifactId>
-		<version>3.5.0</version>
-      </plugin>
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-project-info-reports-plugin</artifactId>
+				<version>3.4.5</version>
+				<reportSets>
+					<reportSet>
+						<reports>
+							<report>index</report>
+							<report>plugin-management</report>
+							<report>summary</report>
+							<report>ci-management</report>
+							<report>dependencies</report>
+							<report>dependency-convergence</report>
+							<report>dependency-info</report>
+							<report>dependency-management</report>
+							<report>distribution-management</report>
+							<report>help</report>
+							<report>issue-management</report>
+							<report>licenses</report>
+							<report>mailing-lists</report>
+							<report>modules</report>
+							<report>plugins</report>
+							<report>scm</report>
+							<report>team</report>
+						</reports>
+					</reportSet>
+				</reportSets>
+			</plugin>
 
-      <plugin>
-		<groupId>org.apache.maven.plugins</groupId>
-		<artifactId>maven-checkstyle-plugin</artifactId>
-		<version>3.3.0</version>
-	  </plugin>
-	  
-    </plugins>
-  </reporting>    
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>3.5.0</version>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-checkstyle-plugin</artifactId>
+				<version>3.3.0</version>
+			</plugin>
+
+		</plugins>
+	</reporting>    
   
 </project>
