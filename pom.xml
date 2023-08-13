@@ -28,16 +28,19 @@
 				<artifactId>maven-site-plugin</artifactId>
 				<version>4.0.0-M8</version>
 				<!--        <version>3.7.1</version>-->
+				<configuration>
+					<outputDirectory>${project.build.directory}/site-webapp</outputDirectory>
+				</configuration>	
 			</plugin>
 
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>cobertura-maven-plugin</artifactId>
 				<version>2.7</version>
-<!--				<configuration>-->
+				<configuration>
 <!--					<outputDirectory>${project.build.directory}/site/cobertura</outputDirectory>-->
-<!--					<outputDirectory>${project.build.directory}/site-webapp/cobertura</outputDirectory>-->
-<!--				</configuration>-->
+					<outputDirectory>${project.build.directory}/site-webapp/cobertura</outputDirectory>
+				</configuration>
 				<executions>
 					<execution>
 						<phase>site</phase>
