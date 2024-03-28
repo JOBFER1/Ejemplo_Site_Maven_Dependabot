@@ -1,15 +1,15 @@
 package com.curso;
 
-import java.applet.*;
+//import java.applet.*;
 
 /**
  * User object
  .*/
 public class User {
 
-    private static final String _a_AA_constante_1 = "a";
-    public static final int _a_AA_constante_2 = 1;
-    public static final int A1__2 = 2;
+//    private static final String _a_AA_constante_1 = "a";
+//    public static final int _a_AA_constante_2 = 1;
+//    public static final int A1__2 = 2;
 
     /**Comentario Javadoc para id.*/
     private Integer id;
@@ -33,17 +33,17 @@ public class User {
         this.email = pEmail;
     }
     
-    public User() { 
-//        String b = _a_AA_constante_1;
-//        int c = _a_AA_constante_2;
-      for (int i = 0; i < 10; i++) { // violation 'Must have at least one statement'
-      }
-
-      try { // violation 'Must have at least one statement'
-      } catch (Exception e) {
-      // ignored
-      }
-    }
+//    public User() { 
+////        String b = _a_AA_constante_1;
+////        int c = _a_AA_constante_2;
+//      for (int i = 0; i < 10; i++) { // violation 'Must have at least one statement'
+//      }
+//
+//      try { // violation 'Must have at least one statement'
+//      } catch (Exception e) {
+//      // ignored
+//      }
+//    }
 
     /**Comentario Javadoc para getId.
      * @return El id
