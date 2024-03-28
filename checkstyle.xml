@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC
+"-//Puppy Crawl//DTD Check Configuration 1.3//EN"
+"http://www.puppycrawl.com/dtds/configuration_1_3.dtd">
+
+<module name="Checker">
+
+    <module name="FileTabCharacter">
+        <!-- Checks that there are no tab characters in the file. -->
+    </module>
+
+    <module name="JavadocPackage" />
+
+    <module name="TreeWalker">
+
+        <module name="AvoidStarImport" />
+ 
+        <module name="ConstantName">
+            <property name="format" value="^log(ger)?$|^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$" />
+        </module>
+   
+        <module name="EmptyBlock" />
+
+        <module name="MethodLength">
+            <property name="max" value="6" />
+        </module>
+
+    </module>
+
+</module>
